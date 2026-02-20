@@ -2,6 +2,12 @@
 
 A tiny Java Swing app that simulates a **flight booking UI** and resolves airline domain IPs. Perfect for demos, classroom exercises, or quick UI experiments. 💺🌍
 
+## 📝 Short Description
+An easy-to-run Java Swing demo that lets users resolve airline domains to IPs and simulate seat selection in a lightweight desktop UI.
+
+## 🏷️ Suggested Topics
+`java` `swing` `desktop-app` `gui` `demo` `flight-booking` `dns` `networking` `ui`
+
 ## ✨ Highlights
 - 🧭 **Domain to IP resolver** using `InetAddress`
 - 🪑 **Seat selection** buttons with confirmation prompts
