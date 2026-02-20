@@ -18,7 +18,7 @@ on:
    uses: actions/setup-java@v4
    with:
      java-version: '17' # Change this to match your projects version
-     distribution: 'termurin
+     distribution: 'termurin'
 
   -name: Build with Ant
    run: ant -nionput -buildfile build.xml
