@@ -1,25 +1,34 @@
-name: Java CI with Ant
+name: Build Ant Java App
 
 on:
- Push:
-  branches: ["master"]
- pull_request:
-  branches: ["master"]
+  push:
+    branches: [ "main" ]
+  pull_request:
 
- jobs:
+jobs:
   build:
-   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-   steps:
-   -name: Checkout code
-   uses: actions/checkout@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-   -name: Set up JDK
-   uses: actions/setup-java@v4
-   with:
-     java-version: '17' # Change this to match your projects version
-     distribution: 'termurin'
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "24"
 
-  -name: Build with Ant
-  run: ant -nionput -buildfile build.xml
+      - name: Set up Ant
+        run: sudo apt-get update && sudo apt-get install -y ant
+
+      - name: Build jar
+        run: ant clean jar
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flghtbookingDemo-jar
+          path: dist/flghtbookingDemo.jar
+
   
