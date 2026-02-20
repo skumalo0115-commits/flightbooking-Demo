@@ -12,11 +12,11 @@ on:
 
    steps:
    -name: Checkout code
-    uses: actions/checkout@v4
+   uses: actions/checkout@v4
 
    -name: Set up JDK
-    uses: actions/setup-java@v4
-    with:
+   uses: actions/setup-java@v4
+   with:
      java-version: '17' # Change this to match your projects version
      distribution: 'termurin
 
